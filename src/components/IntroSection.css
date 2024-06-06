@@ -1,0 +1,96 @@
+/* src/components/IntroSection.css */
+
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000; /* Black background for visibility */
+    overflow: hidden; /* Prevent horizontal and vertical overflow */
+  }
+  
+  .intro-section-container {
+    text-align: center;
+    color: white;
+  }
+  
+  .intro-title {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .prompt-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    border-radius: 25px; /* Rounded border */
+    padding: 10px;
+    position: relative; /* Position relative for the icon */
+    box-sizing: border-box;
+  }
+  
+  .prompt-input {
+    font-size: 1em;
+    padding: 15px;
+    border: none;
+    border-radius: 25px 0 0 25px;
+    outline: none;
+    flex-grow: 1;
+    background: transparent; /* Transparent background */
+    color: white; /* Text color */
+    padding-left: 50px; /* Space for the icon */
+  }
+  
+  .prompt-input::placeholder {
+    color: rgba(255, 255, 255, 0.5); /* Darker placeholder text */
+  }
+  
+  .prompt-input::after {
+    content: '|';
+    animation: blink 1s infinite;
+    opacity: 1;
+  }
+  
+  @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  .prompt-icon {
+    position: absolute;
+    left: 15px;
+    font-size: 1.2em;
+    color: white;
+  }
+  
+  .prompt-button {
+    font-size: 1em;
+    padding: 15px 25px;
+    border: 1px solid white; /* White, thin border */
+    border-radius: 25px; /* Fully rounded button */
+    cursor: pointer;
+    background: transparent; /* Transparent background */
+    color: white;
+    outline: none;
+    transition: background 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .prompt-button:hover {
+    background: rgba(255, 255, 255, 0.1); /* Airbrush look */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Airbrush effect */
+  }
+  
+  .prompt-button span {
+    display: inline-block;
+    margin-left: 10px; /* Space between text and icon */
+  }
+  

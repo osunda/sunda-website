@@ -1,0 +1,111 @@
+/* src/components/Navbar.css */
+header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1435px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    z-index: 99;
+  }
+  
+  header.scrolled {
+    background: rgba(0, 0, 0, 0.7); /* Dark background */
+    backdrop-filter: blur(10px); /* Blurred background */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Slightly visible border */
+    border-radius: 20px; /* Adjust radius as needed */
+  }
+  
+  .logo {
+    color: white;
+    font-family: 'Satoshi', sans-serif;
+  }
+  
+  .navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+    font-weight: 100;
+    font-family: 'Satoshi', sans-serif;
+    transition: all 0.3s ease;
+  }
+  
+  .navigation a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s;
+    position: relative;
+  }
+  
+  .navigation a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    bottom: -2px;
+    right: 0;
+    background: white;
+    transition: width 0.3s ease, right 0.3s ease;
+  }
+  
+  .navigation a:hover::after {
+    width: 100%;
+    right: 0;
+  }
+  
+  .wallet-popup-wrapper {
+    background: linear-gradient(45deg, #0019FF, #50D4E7, #0019FF);
+    background-size: 300% 300%;
+    padding: 2px;
+    border-radius: 26px;
+    display: inline-block;
+    animation: gradientAnimation 2s linear infinite;
+  }
+  
+  .wallet-popup {
+    background: #000000;
+    width: 126px;
+    height: 46px;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    font-family: 'Satoshi Light', sans-serif;
+    font-size: 0.9em;
+    font-weight: 500;
+    color: white;
+    transition: color 0.3s, background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .wallet-popup:hover {
+    background: #333333; /* Darker background on hover */
+    color: #ffffff; /* Ensure text color remains white */
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  

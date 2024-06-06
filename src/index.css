@@ -1,0 +1,17 @@
+/* src/index.css */
+/* Add your global styles here */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Satoshi', sans-serif;
+    color: white;
+    background: linear-gradient(45deg, #000000, #000000, #000000);
+    background-size: 150% 150%;
+    overflow-x: hidden;
+  }
+  
+  .container {
+    max-width: 1435px;
+    margin: 0 auto;
+  }
+  
