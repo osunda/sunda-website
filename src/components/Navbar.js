@@ -3,6 +3,7 @@ import './Navbar.css';
 import AudioPlayer from './AudioPlayer';
 
 const Navbar = () => {
+  
   const [isPlaying, setIsPlaying] = useState(false);
 
   const togglePlayPause = () => {
