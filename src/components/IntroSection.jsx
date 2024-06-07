@@ -13,7 +13,7 @@ const IntroSection = () => {
   const [currentPhrase, setCurrentPhrase] = useState('');
   const [userInput, setUserInput] = useState('');
   const [loopNum, setLoopNum] = useState(0);
-  const [typingSpeed, setTypingSpeed] = useState(50); // Faster typing speed
+  const typingSpeed = 50; // Faster typing speed, removed setTypingSpeed
 
   useEffect(() => {
     const handleTyping = () => {
