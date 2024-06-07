@@ -1,5 +1,3 @@
-/* src/components/Navbar.css */
-
 header {
   position: fixed;
   top: 0;
@@ -14,17 +12,7 @@ header {
   padding: 10px 20px;
   box-sizing: border-box;
   opacity: 1;
-  transition: all 0.3s ease;
   z-index: 99;
-}
-
-header.scrolled {
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(0, 0, 0, 0); /* Invisible border */
-  border-radius: 20px; /* Adjust radius as needed */
-  padding: 10px 20px;
-  max-width: 1200px; /* Adjust as needed */
 }
 
 .logo {
@@ -75,71 +63,31 @@ header.scrolled {
   right: 0;
 }
 
+.actions {
+  display: flex;
+  align-items: center;
+}
+
 .wallet-popup-wrapper {
-  background: linear-gradient(45deg, #0019FF, #50D4E7, #0019FF);
-  background-size: 300% 300%;
-  padding: 2px;
-  border-radius: 26px;
   display: inline-block;
-  animation: gradientAnimation 2s linear infinite;
 }
 
 .wallet-popup {
-  background: #000000;
-  width: 126px;
-  height: 46px;
-  border: none;
-  border-radius: 24px;
+  font-size: 1em;
+  padding: 15px 25px;
+  border: 1px solid white;
+  border-radius: 25px;
   cursor: pointer;
-  font-family: 'Satoshi Light', sans-serif;
-  font-size: 0.9em;
-  font-weight: 500;
+  background: transparent;
   color: white;
-  transition: color 0.3s, background 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  outline: none;
+  transition: background 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.sound-icon {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  margin-left: 50px; /* Increase the spacing to move it more to the right */
-}
-
-.sound-icon .line {
-  width: 3px;
-  height: 20px;
-  background: white;
-  margin: 0 2px;
-  transition: all 0.3s;
-}
-
-.sound-icon .line.playing {
-  animation: soundWave 1s infinite;
-}
-
-@keyframes soundWave {
-  0% {
-    transform: scaleY(1);
-  }
-  50% {
-    transform: scaleY(1.5);
-  }
-  100% {
-    transform: scaleY(1);
-  }
+.wallet-popup:hover {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }

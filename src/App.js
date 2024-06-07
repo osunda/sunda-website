@@ -1,33 +1,17 @@
-// src/App.js
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Navbar from './components/Navbar';
 import IntroSection from './components/IntroSection';
 import Loader from './components/Loader';
+import './App.css'; // Ensure global styles are applied
 
-function App() {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
+const App = () => {
   return (
-    <div className="App">
+    <div>
       <Loader />
-      <div id="content">
-        <Navbar scrolled={scrolled} />
-        <IntroSection />
-      </div>
+      <Navbar />
+      <IntroSection />
     </div>
   );
-}
+};
 
 export default App;

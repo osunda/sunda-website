@@ -1,4 +1,3 @@
-// src/components/IntroSection.js
 import React, { useEffect, useState } from 'react';
 import './IntroSection.css';
 
@@ -47,7 +46,7 @@ const IntroSection = () => {
         One prompt away from your imagination
       </h1>
       <div className="prompt-box">
-        <span className="prompt-icon">✨</span> {/* Example icon, you can use any other */}
+        <span className="prompt-icon">✨</span>
         <input
           type="text"
           className="prompt-input"
@@ -57,7 +56,7 @@ const IntroSection = () => {
         />
         <button className="prompt-button">
           Generate
-          <span>➔</span> {/* Example arrow icon */}
+          <span>➔</span>
         </button>
       </div>
     </div>
