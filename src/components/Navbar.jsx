@@ -1,9 +1,8 @@
-// src/components/Navbar.js
 import React, { useState } from 'react';
 import './Navbar.css';
-import AudioPlayer from './AudioPlayer'; // Import the AudioPlayer component
+import AudioPlayer from './AudioPlayer'; // Assuming the sound icon is part of the AudioPlayer component
 
-const Navbar = ({ scrolled }) => {
+const Navbar = ({ toggleMenu, menuOpen }) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   const togglePlayPause = () => {
@@ -11,7 +10,7 @@ const Navbar = ({ scrolled }) => {
   };
 
   return (
-    <header id="navbar" className={scrolled ? 'scrolled' : ''}>
+    <header id="navbar">
       <h2 className="logo">Monat</h2>
       <nav className="navigation">
         <a href="#documentation">Documentation</a>
@@ -19,16 +18,16 @@ const Navbar = ({ scrolled }) => {
         <a href="#tokenomics">Tokenomics</a>
         <a href="#discord">Discord</a>
       </nav>
-      <div className="actions">
-        <AudioPlayer isPlaying={isPlaying} togglePlayPause={togglePlayPause} />
-        <div className="wallet-popup-wrapper">
-          <button className="wallet-popup">
-            Contact Us
-          </button>
-        </div>
+      <div className="sound-icon" onClick={togglePlayPause}>
+        <AudioPlayer isPlaying={isPlaying} />
       </div>
+      <button className="menu-toggle" onClick={toggleMenu}>
+        ☰
+      </button>
     </header>
   );
 };
 
 export default Navbar;
+
+       

@@ -1,5 +1,3 @@
-/* src/components/Navbar.css */
-
 header {
   position: fixed;
   top: 0;
@@ -14,17 +12,7 @@ header {
   padding: 10px 20px;
   box-sizing: border-box;
   opacity: 1;
-  transition: all 0.3s ease;
   z-index: 99;
-}
-
-header.scrolled {
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(0, 0, 0, 0); /* Invisible border */
-  border-radius: 20px; /* Adjust radius as needed */
-  padding: 10px 20px;
-  max-width: 1200px; /* Adjust as needed */
 }
 
 .logo {
@@ -75,43 +63,32 @@ header.scrolled {
   right: 0;
 }
 
-.actions {
+.sound-icon {
   display: flex;
   align-items: center;
-}
-
-.wallet-popup-wrapper {
-  display: inline-block;
-}
-
-.wallet-popup {
-  font-size: 1em;
-  padding: 15px 25px;
-  border: 1px solid white; /* White, thin border */
-  border-radius: 25px; /* Fully rounded button */
   cursor: pointer;
-  background: transparent; /* Transparent background */
+  margin-left: 20px;
+}
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
   color: white;
-  outline: none;
-  transition: background 0.3s, box-shadow 0.3s;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
+  font-size: 2em;
+  cursor: pointer;
 }
 
-.wallet-popup:hover {
-  background: rgba(255, 255, 255, 0.1); /* Airbrush look */
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Airbrush effect */
-}
+@media (max-width: 768px) {
+  .navigation {
+    display: none;
+  }
 
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
+  .menu-toggle {
+    display: block;
   }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
+
+  .sound-icon {
+    display: none;
   }
 }
