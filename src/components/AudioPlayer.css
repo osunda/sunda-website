@@ -20,22 +20,22 @@
 }
 
 .sound-icon .bar:nth-child(1) {
-  height: 10px; /* Shorter extremity */
+  height: 10px; 
   animation: grow 1s ease-in-out calc(1s * -0.45) infinite;
 }
 
 .sound-icon .bar:nth-child(2) {
-  height: 15px; /* Slightly longer */
+  height: 15px; 
   animation: grow 1s ease-in-out calc(1s * -0.3) infinite;
 }
 
 .sound-icon .bar:nth-child(3) {
-  height: 20px; /* Longer middle */
+  height: 20px; 
   animation: grow 1s ease-in-out calc(1s * -0.15) infinite;
 }
 
 .sound-icon .bar:nth-child(4) {
-  height: 15px; /* Slightly longer */
+  height: 15px; 
   animation: grow 1s ease-in-out infinite;
 }
 

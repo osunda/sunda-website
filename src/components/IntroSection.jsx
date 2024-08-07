@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 import './IntroSection.css';
 
 const phrases = [
-  "Visualize the city of Tokyo in the year 2070.",
-  "Imagine a great battle on the sea between two pirate ships.",
-  "Picture a species far more advanced than the human race.",
-  "Visualize our civilization if DogeCoin reached 1$.",
-  "Imagine a human colony on Mars."
+  "If you could be an animal, what would it be?",
+  "What are your skill sets?",
+  "Where can I get in contact with you?",
+  "Do you have any previous projects?",
+  "How long have you been in the Web 3 space?",
 ];
 
 const IntroSection = () => {
@@ -43,7 +43,7 @@ const IntroSection = () => {
   return (
     <div className="intro-section-container">
       <h1 className="intro-title">
-        One prompt away from your imagination
+        Ask me anything about myself, literally
       </h1>
       <div className="prompt-box">
         <span className="prompt-icon">✨</span>
@@ -55,8 +55,7 @@ const IntroSection = () => {
           placeholder={currentPhrase}
         />
         <button className="prompt-button">
-          Generate
-          <span>➔</span>
+          ➔
         </button>
       </div>
     </div>

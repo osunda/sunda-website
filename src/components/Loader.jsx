@@ -31,9 +31,9 @@ const Loader = () => {
 
     return (
         <div id="loader-wrapper">
-            <div id="monat-text">Monat.ai</div>
+            <div id="monat-text">gunnar.eth</div>
             <div id="status-text">
-                Connecting to Web3 <span id="percentage">[{percentage}%]</span>
+                Loading credentials<span id="percentage">[{percentage}%]</span>
             </div>
         </div>
     );

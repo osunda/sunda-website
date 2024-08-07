@@ -1,5 +1,5 @@
 #loader-wrapper {
-    font-family: 'Satoshi', sans-serif;
+    font-family: 'comptuter says no', monospace;
     font-size: 14px;
     background-color: #000000;
     opacity: 1;
@@ -23,7 +23,8 @@
 }
 
 #status-text {
-    font-family: 'Courier', monospace;
+    font-size: 30px;
+    font-family: 'computer says no','monospace';
     text-align: center;
     color: #838383;
 }

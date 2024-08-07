@@ -3,7 +3,7 @@
 body, html {
     height: 100%;
     margin: 0;
-    font-family: 'Satoshi', sans-serif;
+    font-family: 'computer says no', 'monospace';
     color: white;
     background: linear-gradient(45deg, #000000, #000000, #000000);
     background-size: 150% 150%;

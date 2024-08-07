@@ -28,13 +28,13 @@ const AudioPlayer = ({ isPlaying, togglePlayPause }) => {
   const fadeIn = () => {
     gainNodeRef.current.gain.cancelScheduledValues(audioContextRef.current.currentTime);
     gainNodeRef.current.gain.setValueAtTime(0, audioContextRef.current.currentTime);
-    gainNodeRef.current.gain.linearRampToValueAtTime(0.2, audioContextRef.current.currentTime + 2); // 2 seconds fade-in
+    gainNodeRef.current.gain.linearRampToValueAtTime(0.2, audioContextRef.current.currentTime + 2); 
   };
 
   const fadeOut = () => {
     gainNodeRef.current.gain.cancelScheduledValues(audioContextRef.current.currentTime);
     gainNodeRef.current.gain.setValueAtTime(0.2, audioContextRef.current.currentTime);
-    gainNodeRef.current.gain.linearRampToValueAtTime(0, audioContextRef.current.currentTime + 2); // 2 seconds fade-out
+    gainNodeRef.current.gain.linearRampToValueAtTime(0, audioContextRef.current.currentTime + 2); 
     setTimeout(() => {
       if (!isPlaying) {
         audioRef.current.pause();
@@ -45,7 +45,7 @@ const AudioPlayer = ({ isPlaying, togglePlayPause }) => {
   return (
     <div className="audio-player-container">
       <audio ref={audioRef} loop>
-        <source src="/Ethereal.mp3" type="audio/mpeg" />
+        <source src="/AndanteC.mp3" type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
       <div className={`sound-icon ${isPlaying ? '' : 'paused'}`} onClick={togglePlayPause}>

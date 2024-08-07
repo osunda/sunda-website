@@ -7,7 +7,7 @@ header {
   max-width: 1435px;
   background: transparent;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   padding: 10px 20px;
   box-sizing: border-box;
@@ -15,21 +15,15 @@ header {
   z-index: 99;
 }
 
-.logo {
-  color: white;
-  font-family: 'Satoshi', sans-serif;
-}
-
 .navigation {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  flex-grow: 1;
   font-size: 1.1em;
   color: white;
   text-decoration: none;
   font-weight: 100;
-  font-family: 'Satoshi', sans-serif;
+  font-family: 'computer says no', monospace;
   transition: all 0.3s ease;
 }
 
@@ -39,7 +33,7 @@ header {
   text-decoration: none;
   margin: 0 15px;
   transition: color 0.3s;
-  font-family: 'Satoshi', sans-serif;
+  font-family: 'computer says no', monospace;
 }
 
 .navigation a:last-child {

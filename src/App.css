@@ -1,7 +1,15 @@
+@font-face {
+  font-family: 'YourCustomFont';
+  src: url('./fonts/computer-says-no.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   padding: 0;
   overflow: hidden; /* Prevent scrolling when menu is open */
+  font-family: 'YourCustomFont', sans-serif; 
 }
 
 .overlay {

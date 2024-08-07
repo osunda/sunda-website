@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Navbar.css';
-import AudioPlayer from './AudioPlayer'; // Assuming the sound icon is part of the AudioPlayer component
+import AudioPlayer from './AudioPlayer';
 
 const Navbar = ({ toggleMenu, menuOpen }) => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -11,7 +11,6 @@ const Navbar = ({ toggleMenu, menuOpen }) => {
 
   return (
     <header id="navbar">
-      <h2 className="logo">Monat</h2>
       <nav className="navigation">
         <a href="#documentation">Documentation</a>
         <a href="#vision">Vision</a>
@@ -29,5 +28,3 @@ const Navbar = ({ toggleMenu, menuOpen }) => {
 };
 
 export default Navbar;
-
-       
