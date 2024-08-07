@@ -31,9 +31,9 @@ const Loader = () => {
 
     return (
         <div id="loader-wrapper">
-            <div id="monat-text">gunnar.eth</div>
+            <div id="monat-text">Cron group</div>
             <div id="status-text">
-                Loading credentials<span id="percentage">[{percentage}%]</span>
+                Loading components<span id="percentage">[{percentage}%]</span>
             </div>
         </div>
     );

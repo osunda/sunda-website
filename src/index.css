@@ -4,8 +4,8 @@ body, html {
     height: 100%;
     margin: 0;
     font-family: 'computer says no', 'monospace';
-    color: white;
-    background: linear-gradient(45deg, #000000, #000000, #000000);
+    color: rgb(255, 255, 255);
+    background: #000000;
     background-size: 150% 150%;
     overflow-x: hidden;
   }

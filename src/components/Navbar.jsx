@@ -1,30 +1,37 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
-import AudioPlayer from './AudioPlayer';
 
-const Navbar = ({ toggleMenu, menuOpen }) => {
-  const [isPlaying, setIsPlaying] = useState(false);
+const Navbar = () => {
+  const [activeRound, setActiveRound] = useState('Connect');
 
-  const togglePlayPause = () => {
-    setIsPlaying(!isPlaying);
+  const handleHover = (item) => {
+    setActiveRound(item === 'Connect' ? 'Folder' : 'Connect');
   };
 
   return (
     <header id="navbar">
       <nav className="navigation">
-        <a href="#documentation">Documentation</a>
-        <a href="#vision">Vision</a>
-        <a href="#tokenomics">Tokenomics</a>
-        <a href="#discord">Discord</a>
+        <Link 
+          to="/folder" 
+          className={activeRound === 'Folder' ? 'round' : ''}
+          onMouseEnter={() => handleHover('Folder')}
+          data-hover="Folder"
+        >
+          <span className="text-wrapper">Folder</span>
+        </Link>
+        <Link 
+          to="/" 
+          className={`${activeRound === 'Connect' ? 'round' : ''} active`}
+          onMouseEnter={() => handleHover('Connect')}
+          data-hover="Connect"
+        >
+          <span className="text-wrapper">Connect</span>
+        </Link>
       </nav>
-      <div className="sound-icon" onClick={togglePlayPause}>
-        <AudioPlayer isPlaying={isPlaying} />
-      </div>
-      <button className="menu-toggle" onClick={toggleMenu}>
-        ☰
-      </button>
     </header>
   );
 };
 
 export default Navbar;
+

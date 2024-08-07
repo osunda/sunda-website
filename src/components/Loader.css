@@ -1,7 +1,7 @@
 #loader-wrapper {
     font-family: 'comptuter says no', monospace;
     font-size: 14px;
-    background-color: #000000;
+    background-color: #000000;;
     opacity: 1;
     transition: opacity 1s ease-out;
     position: fixed;
@@ -26,5 +26,5 @@
     font-size: 30px;
     font-family: 'computer says no','monospace';
     text-align: center;
-    color: #838383;
+    color: #7c7c7c;
 }

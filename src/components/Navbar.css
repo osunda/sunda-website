@@ -1,60 +1,81 @@
+body, html {
+  background-color: #000000; /* Cream color background */
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 header {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 1435px;
-  background: transparent;
+  background-color: #000000; /* Match the body background */
+  height: 100vh; /* Full viewport height */
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  padding: 10px 20px;
-  box-sizing: border-box;
-  opacity: 1;
-  z-index: 99;
 }
 
 .navigation {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  font-size: 1.1em;
-  color: white;
-  text-decoration: none;
-  font-weight: 100;
-  font-family: 'computer says no', monospace;
-  transition: all 0.3s ease;
+  justify-content: center;
+  gap: 40px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
 }
 
 .navigation a {
-  position: relative;
-  color: white;
+  color: #000000;
   text-decoration: none;
-  margin: 0 15px;
-  transition: color 0.3s;
-  font-family: 'computer says no', monospace;
+  font-family: 'Computer Says No', monospace;
+  font-size: 1.3em;
+  padding: 8px 16px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  line-height: 1;
+  overflow: hidden;
+  position: relative;
 }
 
-.navigation a:last-child {
-  margin-right: 0;
+.navigation a.round {
+  border-radius: 20px;
+}
+
+.navigation a.active {
+  background-color: #ffffff; /* Dark grey for Connect tab */
+  color: #000000; /* White text for better contrast */
+}
+
+.navigation a .text-wrapper {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.navigation a:hover .text-wrapper {
+  transform: translateY(-150%);
 }
 
 .navigation a::after {
-  content: '';
+  content: attr(data-hover);
   position: absolute;
-  width: 0;
-  height: 2px;
-  display: block;
-  bottom: -2px;
+  left: 0;
   right: 0;
-  background: white;
-  transition: width 0.3s ease, right 0.3s ease;
+  bottom: -150%;
+  padding: 8px 16px;
+  transition: transform 0.3s ease;
+  font-family: 'Computer Says No', monospace;
 }
 
 .navigation a:hover::after {
-  width: 100%;
-  right: 0;
+  transform: translateY(-150%);
+}
+
+.navigation a.active:hover .text-wrapper,
+.navigation a.active:hover::after {
+  color: #000000; /* Ensure hover text remains white for active tab */
 }
 
 .sound-icon {
@@ -68,7 +89,7 @@ header {
   display: none;
   background: transparent;
   border: none;
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 2em;
   cursor: pointer;
 }
@@ -86,3 +107,4 @@ header {
     display: none;
   }
 }
+
