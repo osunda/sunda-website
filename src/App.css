@@ -8,7 +8,7 @@
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden; /* Prevent scrolling when menu is open */
+  overflow: hidden;
   font-family: 'YourCustomFont', sans-serif; 
 }
 
@@ -46,10 +46,10 @@ body {
 
 @media (min-width: 769px) {
   body.menu-open {
-    overflow: auto; /* Allow scrolling for larger screens */
+    overflow: auto;
   }
 
   .overlay {
-    display: none; /* Hide overlay for larger screens */
+    display: none;
   }
 }

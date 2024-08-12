@@ -1,4 +1,3 @@
-// src/components/Loader.js
 import React, { useEffect, useState } from 'react';
 import './Loader.css';
 
@@ -31,7 +30,7 @@ const Loader = () => {
 
     return (
         <div id="loader-wrapper">
-            <div id="monat-text">Cron group</div>
+            <div id="sundaa-text">sundaa.com</div>
             <div id="status-text">
                 Loading components<span id="percentage">[{percentage}%]</span>
             </div>

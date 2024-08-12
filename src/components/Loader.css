@@ -1,7 +1,7 @@
 #loader-wrapper {
-    font-family: 'comptuter says no', monospace;
+    font-family: 'computer says no', monospace;
     font-size: 14px;
-    background-color: #000000;;
+    background-color: #000000;
     opacity: 1;
     transition: opacity 1s ease-out;
     position: fixed;
@@ -16,15 +16,20 @@
     z-index: 1000;
 }
 
-#monat-text {
-    font-size: 40px;
+#sundaa-text {
+    font-size: 64px;
     color: #ffffff;
-    margin-bottom: 10px;
+    margin-bottom: 0; /* Removed margin */
+    line-height: 1; /* Adjust line height to minimize space */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
+    0 0 10px rgba(255, 255, 255, 0.3),
+    0 0 15px rgba(255, 255, 255, 0.2);
 }
 
 #status-text {
     font-size: 30px;
-    font-family: 'computer says no','monospace';
+    font-family: 'computer says no', monospace;
     text-align: center;
     color: #7c7c7c;
+    margin-top: 5px; /* Add a small top margin to prevent text overlap */
 }

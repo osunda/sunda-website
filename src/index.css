@@ -1,16 +1,19 @@
 /* src/index.css */
 /* Add your global styles here */
 body, html {
-    height: 100%;
-    margin: 0;
-    font-family: 'computer says no', 'monospace';
-    color: rgb(255, 255, 255);
-    background: #000000;
-    background-size: 150% 150%;
-    overflow-x: hidden;
-  }
-  
-  .container {
-    max-width: 1435px;
-    margin: 0 auto;
-  }
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color:black
+}
+
+#root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding-top: 60px; /* Adjust this to match your navbar height */
+}
