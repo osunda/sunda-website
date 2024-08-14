@@ -1,7 +1,7 @@
 #loader-wrapper {
     font-family: 'computer says no', monospace;
     font-size: 14px;
-    background-color: #000000;
+    background-color: #121212;
     opacity: 1;
     transition: opacity 1s ease-out;
     position: fixed;
@@ -16,14 +16,15 @@
     z-index: 1000;
 }
 
+#loader-wrapper.fade-out {
+    opacity: 0;
+}
+
 #sundaa-text {
     font-size: 64px;
     color: #ffffff;
-    margin-bottom: 0; /* Removed margin */
-    line-height: 1; /* Adjust line height to minimize space */
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
-    0 0 10px rgba(255, 255, 255, 0.3),
-    0 0 15px rgba(255, 255, 255, 0.2);
+    margin-bottom: -10px;
+    animation: glow 2s ease-in-out infinite;
 }
 
 #status-text {
@@ -31,5 +32,17 @@
     font-family: 'computer says no', monospace;
     text-align: center;
     color: #7c7c7c;
-    margin-top: 5px; /* Add a small top margin to prevent text overlap */
+}
+
+@keyframes glow {
+    0%, 100% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
+                     0 0 10px rgba(255, 255, 255, 0.3),
+                     0 0 15px rgba(255, 255, 255, 0.2);
+    }
+    50% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                     0 0 20px rgba(255, 255, 255, 0.6),
+                     0 0 30px rgba(255, 255, 255, 0.4);
+    }
 }

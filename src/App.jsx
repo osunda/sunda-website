@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Loader from './components/Loader';
 import ProjectsPage from './components/ProjectsPage';
-import Home from './components/Home';
 import Connect from './components/Connect';
+import SoundControl from './components/SoundControl';
 import './App.css';
 
 const App = () => {
@@ -13,7 +13,7 @@ const App = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 3200);
 
     return () => clearTimeout(timer);
   }, []);
@@ -28,11 +28,12 @@ const App = () => {
             <Navbar />
             <main className="main-content">
               <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/folder" element={<ProjectsPage />} />
+                <Route path="/" element={<ProjectsPage />} />
                 <Route path="/connect" element={<Connect />} />
+                <Route path="*" element={<Navigate to="/" replace />} />
               </Routes>
             </main>
+            <SoundControl />
           </>
         )}
       </div>

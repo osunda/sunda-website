@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 
 const encryptChar = () => {
@@ -10,10 +9,8 @@ const encryptChar = () => {
 const Navbar = () => {
   const [activeItem, setActiveItem] = useState(null);
   const [hoverText, setHoverText] = useState({});
-  const [isPlaying, setIsPlaying] = useState(false);
-  const audioRef = useRef(new Audio('/AndanteC.mp3'));
 
-  const navItems = ['Home', 'Folder', 'Connect', 'Music'];
+  const navItems = ['Folder', 'Connect'];
 
   useEffect(() => {
     if (activeItem) {
@@ -45,27 +42,15 @@ const Navbar = () => {
     setHoverText({});
   };
 
-  const toggleMusic = (e) => {
-    e.preventDefault();
-    if (isPlaying) {
-      audioRef.current.pause();
-    } else {
-      audioRef.current.play();
-    }
-    setIsPlaying(!isPlaying);
-  };
-
   return (
     <header id="navbar">
       <nav className="navigation">
         {navItems.map(item => (
-          <Link 
+          <a 
             key={item}
-            to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
+            href={`#${item.toLowerCase()}`}
             onMouseEnter={() => handleMouseEnter(item)}
             onMouseLeave={handleMouseLeave}
-            onClick={item === 'Music' ? toggleMusic : undefined}
-            className={item === 'Music' && isPlaying ? 'playing' : ''}
           >
             <span className="text-wrapper">
               {(hoverText[item] || item).split('').map((char, index) => (
@@ -74,7 +59,7 @@ const Navbar = () => {
                 </span>
               ))}
             </span>
-          </Link>
+          </a>
         ))}
       </nav>
     </header>
