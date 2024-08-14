@@ -3,7 +3,6 @@ html {
 }
 
 body {
-  font-family: 'Computer Says No', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -27,7 +26,6 @@ body {
 .navigation a {
   color: #ffffff;
   text-decoration: none;
-  font-family: 'Computer Says No', monospace;
   font-size: 1.3em;
   padding: 8px 16px;
   transition: all 0.3s ease;
