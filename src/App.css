@@ -1,6 +1,6 @@
 @font-face {
   font-family:'Computer Says No', monospace;
-  src: url('./fonts/computer-says-no.ttf') format('truetype');
+  src: url('./fonts/computer-says-no.ttf') format('monospace');
   font-weight: normal;
   font-style: normal;
 }
