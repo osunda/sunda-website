@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'YourCustomFont';
+  font-family:'Computer Says No', monospace;
   src: url('./fonts/computer-says-no.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -9,7 +9,7 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  font-family: 'YourCustomFont', sans-serif; 
+  font-family: 'Computer Says No', monospace;
 }
 
 .overlay {
