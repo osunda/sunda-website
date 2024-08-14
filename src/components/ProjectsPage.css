@@ -146,7 +146,7 @@ body {
 }
 
 .try-it-out {
-  background-color: #2C2C2C;
+  background-color: #01c02a; /* previously 2c2c2c */
   color: #FFFFFF;
   text-decoration: none;
   padding: 6px 30px;
@@ -159,21 +159,23 @@ body {
 }
 
 .try-it-out:hover {
-  background-color: #3C3C3C;
+  background-color: #3c3c3c; /* previously 3c3c3c */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 0 4px rgba(255, 255, 255, 0.2);
 }
 
-.section-title {
+.section-title { 
   color: #FFFFFF;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
   font-size: 2.5em;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   text-align: center;
 }
 
 .about-me {
   padding: 40px 20px;
   margin-bottom: 40px;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
   background-color: #121212;
   text-align: center;
 }

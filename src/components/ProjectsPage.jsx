@@ -5,8 +5,8 @@ const AboutMe = () => (
   <section className="about-me">
     <h1 className="section-title">About Me</h1>
     <p>
-      Hi, I'm Sunda, a finance student & tech enthusiast based in Canada. The main goal of this website is 
-      to push myself to build tools & applications not only for experience but for my own personal enjoyment.
+    Welcome! I'm Sunda, a Canadian finance student & tech enjoyer. This website serves as my digital playground,
+     where I challenge myself to create innovative tools and share my ideas.
     </p>
   </section>
 );
@@ -25,7 +25,10 @@ const StockSenseCard = () => {
       </div>
       <p className="project-description">A Python based tool that provides a risk-based rating for your stock portfolio.</p>
       <div className="project-details" style={{ maxHeight: isExpanded ? '1000px' : '0', overflow: 'hidden', transition: 'max-height 0.3s ease-out' }}>
-        <p>StockSense uses advanced algorithms to analyze your stock portfolio and provide a comprehensive risk assessment. It takes into account factors such as market volatility, industry trends, and historical performance to give you a clear picture of your investment's risk profile.</p>
+        <p>This intuitive application allows users to input their stock holdings and receive a risked based rating & analysis of your investments.
+          The Key features include risk assessment with an overall portfolio risk score, individual stock analysis, insights on diversification across sectors and asset classes, historical performance analysis to predict future volatility, and a user-friendly interface for entering stock holdings.
+
+</p>
       </div>
       <a href="#" className="try-it-out" onClick={(e) => e.stopPropagation()}>try it out</a>
     </div>
@@ -46,7 +49,7 @@ const UpcomingProjectCard = () => {
       </div>
       <p className="project-description">Coming soon! An exciting new project is in the works.</p>
       <div className="project-details" style={{ maxHeight: isExpanded ? '1000px' : '0', overflow: 'hidden', transition: 'max-height 0.3s ease-out' }}>
-        <p>We're working on something big! This upcoming project will revolutionize the way you interact with financial data. Stay tuned for more information and be prepared to experience finance like never before.</p>
+        <p>Nothing to see here yet...</p>
       </div>
       <a href="#" className="try-it-out" onClick={(e) => e.stopPropagation()}>try it out</a>
     </div>

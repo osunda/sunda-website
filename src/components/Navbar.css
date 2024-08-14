@@ -1,5 +1,5 @@
 html {
-  font-size: 16px; /* Set base font size */
+  font-size: 11px; /* Set base font size */
 }
 
 body {
@@ -29,6 +29,7 @@ body {
   font-size: 1.3em;
   padding: 8px 16px;
   transition: all 0.3s ease;
+  font-family: 'UbuntuMono', monospace;
   position: relative;
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
                0 0 10px rgba(255, 255, 255, 0.3),
