@@ -1,4 +1,14 @@
-#navbar {
+html {
+  font-size: 16px; /* Set base font size */
+}
+
+body {
+  font-family: 'Computer Says No', monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+  #navbar {
   background-color: #121212;
   width: 100%;
   position: absolute;
@@ -48,3 +58,4 @@
     align-items: center;
   }
 }
+
