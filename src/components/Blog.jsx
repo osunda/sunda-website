@@ -3,8 +3,8 @@ import React from 'react';
 const Connect = () => {
   return (
     <div>
-      <h1>Connect Component</h1>
-      {/* Add your connect component content here */}
+      <h1>Blog Component</h1>
+      {/* Add your Blog component content here */}
     </div>
   );
 };

@@ -1,0 +1,62 @@
+.footer {
+    padding: 30px 0;
+    width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .social-icon {
+    width: 24px;
+    height: 24px;
+    transition: fill 0.3s ease;
+  }
+  
+  /* Specific styles for X icon */
+  .x-icon {
+    fill: white;
+  }
+  
+  .x-icon:hover {
+    fill: #02e033;
+  }
+  
+  /* Override any internal colors in the X SVG */
+  .x-icon path {
+    fill: inherit;
+  }
+  
+  /* Specific styles for GitHub icon */
+  .github-icon {
+    width: 33px;
+    height: 33px;
+    fill: white;
+    transform: translateY(-5px); /* Move up by 2 pixels */
+  }
+  
+  .github-icon:hover {
+    fill: #02e033;
+  }
+  
+  .copyright {
+    color: #B0B0B0;
+    font-size: 1.1em;
+  }

@@ -2,23 +2,25 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import ProjectsPage from './components/ProjectsPage';
-import Connect from './components/Connect';
-import SoundControl from './components/SoundControl';
+import Footer from './components/Footer';
+import Blog from './components/Blog'; 
 import './App.css';
 
 const App = () => {
   return (
     <Router>
       <div className="app-container">
-        <Navbar />
-        <main className="main-content">
-          <Routes>
-            <Route path="/" element={<ProjectsPage />} />
-            <Route path="/connect" element={<Connect />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Routes>
-        </main>
-        <SoundControl />
+        <div className="content-wrap">
+          <Navbar />
+          <main className="main-content">
+            <Routes>
+              <Route path="/" element={<ProjectsPage />} />
+              <Route path="/Blog" element={<Blog />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
+          </main>
+        </div>
+        <Footer />
       </div>
     </Router>
   );
