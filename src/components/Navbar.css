@@ -1,5 +1,5 @@
 html {
-  font-size: 11px; /* Set base font size */
+  font-size: 12px; /* Slightly increased base font size */
 }
 
 #navbar {
@@ -8,24 +8,34 @@ html {
   top: 0;
   left: 0;
   z-index: 1000;
+  padding-top: 10px;
+  background-color: #121212;
 }
 
 .navigation {
   display: flex;
-  justify-content: center;
-  gap: 40px;
-  padding: 20px 0;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 20px;
+  max-width: 800px; /* Match the max-width of .projects-page */
+  margin: 0 auto; /* Center the navigation container */
+  padding: 0 20px 10px;
+  box-sizing: border-box;
+  overflow-x: auto;
 }
+
 
 .navigation a {
   text-decoration: none;
-  font-size: 1.3em;
+  font-size: 1.5em; /* Increased font size */
   color: white;
   padding: 8px 16px;
   transition: all 0.3s ease;
   display: inline-block;
   position: relative;
   overflow: hidden;
+  flex: 0 0 auto; /* Prevent shrinking */
 }
 
 .navigation a .text-wrapper {
@@ -59,66 +69,32 @@ html {
   color: #000000;
 }
 
-@media (max-width: 768px) {
-  .navigation {
-    flex-direction: column;
-    align-items: center;
-  }
+/* Adjust the main content to account for the navbar */
+.content, .projects-page {
+  padding-top: 60px; /* Reduced padding-top to create less space between navbar and content */
 }
-
-/* body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-  #navbar {
-  background-color: #121212;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-.navigation {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  padding: 20px 0;
-}
-
-.navigation a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 1.3em;
-  padding: 8px 16px;
-  transition: all 0.3s ease;
-  font-family: 'UbuntuMono', monospace;
-  position: relative;
-
-}
-
-.navigation a .text-wrapper {
-  display: inline-block;
-}
-
-.navigation a .char {
-  display: inline-block;
-  transition: text-shadow 0.1s ease;
-}
-
-.navigation a:hover .char {
-  color: #01c02a
-  /* text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
-  0 0 10px rgba(255, 255, 255, 0.3),
-  0 0 15px rgba(255, 255, 255, 0.2); 
-}
-*/
 
 @media (max-width: 768px) {
   .navigation {
-    flex-direction: column;
-    align-items: center;
+    justify-content: flex-start; /* This is already set, but keeping it for clarity */
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  /* Adjust padding for smaller screens */
+  .content, .projects-page {
+    padding-top: 80px; /* Reduced padding-top for smaller screens */
   }
 }
 
+@media (max-width: 480px) {
+  .navigation {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  /* Further adjust padding for even smaller screens */
+  .content, .projects-page {
+    padding-top: 100px; /* Reduced padding-top for even smaller screens */
+  }
+}
